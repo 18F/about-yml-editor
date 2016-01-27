@@ -2,6 +2,12 @@
 
 A rough proof of concept [about.yml](https://github.com/18f/about_yml) editor using [json-editor](https://github.com/JJediny/json-editor) as a base.
 
+This early in development, there isn't a hosted version. Easiest way to get it up and running is:
+
+```
+python -m SimpleHTTPServer
+```
+
 ### Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
