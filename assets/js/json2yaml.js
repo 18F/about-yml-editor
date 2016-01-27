@@ -86,7 +86,7 @@
   }
 
   function convertString(obj, ret) {
-    ret.push(normalizeString(obj));
+    ret.push(obj);
   }
   
   self.json2yaml = function(obj) {
