@@ -9,6 +9,7 @@
     <!-- Font Awesome icons (Bootstrap, Foundation, and jQueryUI also supported) -->
     <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
    
+    <link rel='stylesheet' href='assets/css/style.css'>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="assets/js/jsoneditor.js"></script>
     <script src="assets/js/json2yaml.js"></script>
@@ -32,10 +33,8 @@
       </div>
     </div>
     <div class='row'>
-      <textarea id='yamloutput'></textarea>
-    </div>
-    <div class='row'>
-      <div id='editor_holder' class='medium-12 columns'></div>
+      <div id='editor_holder' class='medium-7 columns'></div>
+      <div class='medium-5 columns'><textarea id='yamloutput' class='yamlwindow'></textarea></div>
     </div>
     
     <script>
@@ -54,6 +53,7 @@
         document.getElementById('generate').addEventListener('click',function() {
           // Get the value from the editor
           var yaml = json2yaml(editor.getValue());
+          console.log(editor.getValue());
           $("#yamloutput").val(yaml);
           console.log(yaml);
         });
@@ -75,6 +75,8 @@
           else {
             indicator.className = 'label success';
             indicator.textContent = 'valid';
+            var yaml = json2yaml(editor.getValue());
+            $("#yamloutput").val(yaml);
           }
         });
       }); 
